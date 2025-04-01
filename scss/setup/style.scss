@@ -224,27 +224,27 @@ body {
 
 		.candle1 {
 			left: 110px;
-			animation: in 500ms 6s ease-out forwards;
+			animation: in 500ms 7.5s ease-out forwards;
 		}
 
 		.candle2 {
 			left: 160px;
-			animation: in 500ms 6.2s ease-out forwards;
+			animation: in 500ms 7.7s ease-out forwards;
 		}
 
 		.candle3 {
 			left: 210px;
-			animation: in 500ms 6.4s ease-out forwards;
+			animation: in 500ms 7.9s ease-out forwards;
 		}
 
 		.candle4 {
 			left: 260px;
-			animation: in 500ms 6.6s ease-out forwards;
+			animation: in 500ms 8.1s ease-out forwards;
 		}
 
 		.candle5 {
 			left: 310px;
-			animation: in 500ms 6.8s ease-out forwards;
+			animation: in 500ms 8.3s ease-out forwards;
 		}
 
 		//Fire
@@ -258,19 +258,19 @@ body {
 			height: 18px;
 		}
 		.fire:nth-child(1) {
-			animation: fire 2s 7.7s infinite;
+			animation: fire 2s 9s infinite;
 		}
 		.fire:nth-child(2) {
-			animation: fire 1.5s 7.7s infinite;
+			animation: fire 1.5s 9s infinite;
 		}
 		.fire:nth-child(3) {
-			animation: fire 1s 7.7s infinite;
+			animation: fire 1s 9s infinite;
 		}
 		.fire:nth-child(4) {
-			animation: fire 0.5s 7.7s infinite;
+			animation: fire 0.5s 9s infinite;
 		}
 		.fire:nth-child(5) {
-			animation: fire 0.2s 7.7s infinite;
+			animation: fire 0.2s 9s infinite;
 		}
 
 		//Animation Fire
@@ -294,20 +294,6 @@ body {
 			}
 		}
 	}
-
-
-	
-
-	// .text {
-	// 	text-align: center;
-	// 	font-family: sg;
-	// 	font-weight: normal;
-	// 	font-size: 3em;
-	// 	color: #ffffff;
-	// }
-
-
-
 
 	.toggleSwitch {
 		width: 50px;

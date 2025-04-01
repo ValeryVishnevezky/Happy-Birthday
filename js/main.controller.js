@@ -1,5 +1,5 @@
 
-const sound = new Audio('/sound/happy-birthday-to-you-jazz-94100.mp3')
+const sound = new Audio('sound/happy-birthday-to-you-jazz-94100.mp3')
 
 function onStart() {
 	const elStart = document.querySelector('.start').classList.add('hide')
