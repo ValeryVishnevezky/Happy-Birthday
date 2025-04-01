@@ -1,10 +1,10 @@
 @font-face {
   font-family: sg;
-  src: url("https://raw.githubusercontent.com/ValeryVishnevezky/Happy-Birthday/main/fonts/SourGummy-Regular.ttf");
+  src: url("fonts/SourGummy-Regular.ttf");
 }
 @font-face {
   font-family: lato;
-  src: url("https://raw.githubusercontent.com/ValeryVishnevezky/Happy-Birthday/main/fonts/Lato-Regular.ttf");
+  src: url("fonts/Lato-Regular.ttf");
 }
 html {
   display: flex;
@@ -28,7 +28,7 @@ body .start {
   height: 97vh;
   text-align: center;
   line-height: 3rem;
-  font-family: lato;
+  font-family: lato, sans-serif;
   font-weight: normal;
   font-size: 1rem;
   letter-spacing: 0.2rem;
@@ -50,7 +50,7 @@ body .start button {
   box-shadow: 2px 3px 3px rgba(2, 35, 54, 0.2705882353);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  font-family: sg;
+  font-family: sg, sans-serif;
   margin-top: 40px;
   width: 80vw;
   place-self: center;
@@ -67,7 +67,7 @@ body header {
 }
 body header h1 {
   text-align: center;
-  font-family: sg;
+  font-family: sg, sans-serif;
   font-weight: normal;
   font-size: 2em;
   margin-bottom: 50px;
@@ -90,7 +90,7 @@ body header button {
   box-shadow: 2px 3px 3px rgba(2, 35, 54, 0.2705882353);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  font-family: sg;
+  font-family: sg, sans-serif;
   z-index: 10;
 }
 body header button .star {
