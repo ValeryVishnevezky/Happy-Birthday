@@ -38,7 +38,7 @@ function startSideConfetti(duration = 1000) {
   }
 
 
-function startConfetti(duration = 1500) {
+function startConfetti(duration = 3000) {
 	const animationEnd = Date.now() + duration
 	const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
 	const interval = setInterval(function () {

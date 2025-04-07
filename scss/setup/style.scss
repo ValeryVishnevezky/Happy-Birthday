@@ -202,6 +202,7 @@ body {
 			margin-left: -2.4px;
 			width: 6px;
 			height: 100px;
+			-webkit-transform: translateY(-300px);
 			transform: translateY(-300px);
 			backface-visibility: hidden;
 		}
@@ -290,6 +291,7 @@ body {
 
 		@keyframes in {
 			to {
+				-webkit-transform: translateY(260px);
 				transform: translateY(260px);
 			}
 		}
