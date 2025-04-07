@@ -33,7 +33,7 @@ body {
 		color: #ffffff;
 
 		h1 {
-			color: #184f7c;
+			color: #0c375a;
 			font-size: 1.8rem;
 		}
 
@@ -43,7 +43,7 @@ body {
 			background: #ffffff;
 			font-size: 1.8em;
 			font-weight: normal;
-			color: #184f7c;
+			color: #0c375a;
 			border: 3px solid #ffffff;
 			border-radius: 8px;
 			box-shadow: 2px 3px 3px #02233645;
@@ -57,6 +57,10 @@ body {
 	}
 
 	.main {
+		display: flex;
+		flex-direction: column;
+		place-content: center;
+
 		header {
 			display: flex;
 			flex-direction: column;
@@ -71,13 +75,13 @@ body {
 				font-size: 2em;
 				color: #ffffff;
 				margin: 0;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 				z-index: 100;
 
 				span {
 					font-size: 2.5rem;
 					font-weight: bold;
-					color: #184f7c;
+					color: #0c375a;
 				}
 			}
 
@@ -87,7 +91,7 @@ body {
 				background: #ffffff;
 				font-size: 1.5em;
 				font-weight: normal;
-				color: #184f7c;
+				color: #0c375a;
 				border: 3px solid #ffffff;
 				border-radius: 8px;
 				box-shadow: 2px 3px 3px #02233645;
@@ -181,18 +185,34 @@ body {
 			position: relative;
 			max-width: 400px;
 			max-height: 300px;
-			margin-top: 20px;
+			margin-top: 60px;
+			place-self: center;
 			display: flex;
 			justify-content: center;
 
-			#cake {
-				display: block;
-				position: relative;
-				justify-self: center;
-				top: -500px;
-				left: 12px;
-				margin: -12em auto 0 auto;
-				min-width: 400px;
+			.blow {
+				position: absolute;
+				top: -50px;
+				width: 400px;
+				height: 350px;
+				z-index: 2;
+				// background-color: #184f7c;
+			}
+
+			.cake {
+				place-self: center;
+				width: fit-content;
+				height: 500px;
+				
+				#cake {
+					display: block;
+					position: relative;
+					align-items: center;
+					justify-self: center;
+					top: -600px;
+					margin: -12em auto 0 auto;
+					width: 450px;
+				}
 			}
 
 			// Candle
@@ -200,9 +220,9 @@ body {
 				background: #ffffff;
 				border-radius: 10px;
 				position: absolute;
-				top: -200px;
+				top: -220px;
 				width: 6px;
-				height: 100px;
+				height: 120px;
 				-webkit-transform: translateY(-300px);
 				transform: translateY(-300px);
 				visibility: hidden;
@@ -233,27 +253,27 @@ body {
 			}
 
 			.candle1 {
-				left: 110px;
+				left: 100px;
 				animation: in 500ms 8s ease-out forwards;
 			}
 
 			.candle2 {
-				left: 160px;
+				left: 150px;
 				animation: in 500ms 8.2s ease-out forwards;
 			}
 
 			.candle3 {
-				left: 210px;
+				left: 200px;
 				animation: in 500ms 8.4s ease-out forwards;
 			}
 
 			.candle4 {
-				left: 260px;
+				left: 250px;
 				animation: in 500ms 8.6s ease-out forwards;
 			}
 
 			.candle5 {
-				left: 310px;
+				left: 300px;
 				animation: in 500ms 8.8s ease-out forwards;
 			}
 
@@ -316,11 +336,11 @@ body {
 			margin: 0;
 			margin-top: 10px;
 		}
-		
-		.wish{
-			margin-top: 30px;
+
+		.wish {
+			margin-top: 60px;
 		}
-		
+
 		.toggleSwitch {
 			width: 50px;
 			height: 50px;
@@ -413,82 +433,69 @@ body {
 	}
 }
 
-@media (max-width: 391px) {
+@media (max-width: 450px) {
 	html {
+		body {
+			// justify-content: center;
+		}
 		.main {
+			header {
+				h1 {
+					font-size: 1.6rem;
+
+					span {
+						font-size: 1.9rem;
+					}
+				}
+
+				button {
+					padding: 8px 25px;
+				}
+			}
+
+			main {
+				.cake{
+					height: 420px;
+					#cake {
+						top: -530px;
+						width: 390px;
+					}
+				}
+				.candle {
+					top: -240px;
+					height: 100px;
+				}
+
+				.candle1 {
+					left: 90px;
+					animation: in 500ms 8s ease-out forwards;
+				}
+	
+				.candle2 {
+					left: 140px;
+					animation: in 500ms 8.2s ease-out forwards;
+				}
+	
+				.candle3 {
+					left: 190px;
+					animation: in 500ms 8.4s ease-out forwards;
+				}
+	
+				.candle4 {
+					left: 240px;
+					animation: in 500ms 8.6s ease-out forwards;
+				}
+	
+				.candle5 {
+					left: 290px;
+					animation: in 500ms 8.8s ease-out forwards;
+				}
+			}
+			h1{
+				font-size: 1.5rem;
+			}
 			.wish {
 				margin: 0;
-			}
-		}
-	}
-}
-
-@media (max-width: 600px) {
-	html {
-		.main {
-
-			main {
-				#cake {
-					left: 0;
-				}
-
-				.candle1 {
-					left: 80px;
-					animation: in 500ms 8s ease-out forwards;
-				}
-
-				.candle2 {
-					left: 130px;
-					animation: in 500ms 8.2s ease-out forwards;
-				}
-
-				.candle3 {
-					left: 180px;
-					animation: in 500ms 8.4s ease-out forwards;
-				}
-
-				.candle4 {
-					left: 230px;
-					animation: in 500ms 8.6s ease-out forwards;
-				}
-
-				.candle5 {
-					left: 280px;
-					animation: in 500ms 8.8s ease-out forwards;
-				}
-			}
-		}
-	}
-}
-
-@media (max-width: 350px) {
-	html {
-		.main {
-			main {
-				.candle1 {
-					left: 70px;
-					animation: in 500ms 8s ease-out forwards;
-				}
-
-				.candle2 {
-					left: 120px;
-					animation: in 500ms 8.2s ease-out forwards;
-				}
-
-				.candle3 {
-					left: 170px;
-					animation: in 500ms 8.4s ease-out forwards;
-				}
-
-				.candle4 {
-					left: 220px;
-					animation: in 500ms 8.6s ease-out forwards;
-				}
-
-				.candle5 {
-					left: 270px;
-					animation: in 500ms 8.8s ease-out forwards;
-				}
 			}
 		}
 	}

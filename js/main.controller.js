@@ -45,8 +45,6 @@ function renderCake() {
 	version="1.1"
 	x="0px"
 	y="0px"
-	width="100%"
-	height="1000px"
 	viewBox="0 0 200 500"
 	enable-background="new 0 0 200 500"
 	xml:space="preserve"
@@ -271,6 +269,13 @@ function renderCake() {
 	</svg>
 	`
 	elCakeContainer.innerHTML = strHTML
+}
+
+function onBlowCandles() {
+	const elFires = document.querySelectorAll('.cake-container .candles .candle .fire')
+	elFires.forEach(fire => fire.classList.add('hide'))
+	startSideConfetti(3000)
+
 }
 
 function onPlay(elCheckbox) {
