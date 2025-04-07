@@ -3,23 +3,25 @@
   src: url("../fonts/SourGummy-Regular.ttf");
 }
 @font-face {
-  font-family: lato;
-  src: url("../fonts/Lato-Regular.ttf");
+  font-family: rubik;
+  src: url("../fonts/Rubik-Regular.ttf");
 }
 html {
   display: flex;
   justify-content: center;
+  background-color: #8ec1f4;
+  background: radial-gradient(circle, rgb(63, 129, 251) 0%, rgba(70, 179, 252, 0.328) 100%);
+  overflow: hidden;
+  height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  place-items: center;
-  justify-content: center;
   max-width: 98vw;
-  background-color: lig;
   margin: 0;
-  background-color: #8ec1f4;
+  overflow: hidden;
+  height: 100%;
 }
 body .start {
   display: flex;
@@ -27,9 +29,9 @@ body .start {
   place-content: center;
   height: 97vh;
   text-align: center;
-  line-height: 3rem;
-  font-family: lato, sans-serif;
-  font-weight: normal;
+  line-height: 2rem;
+  font-family: rubik, sans-serif;
+  font-weight: 100;
   font-size: 1rem;
   letter-spacing: 0.2rem;
   color: #ffffff;
@@ -55,32 +57,31 @@ body .start button {
   width: 80vw;
   place-self: center;
 }
-body header {
+body .main header {
   display: flex;
   flex-direction: column;
   place-items: center;
   padding-top: 20px;
   padding-bottom: 50px;
-  width: 100%;
-  z-index: 1;
-  background-color: #8ec1f4;
 }
-body header h1 {
+body .main header h1 {
   text-align: center;
-  font-family: sg, sans-serif;
+  font-family: rubik, sans-serif;
   font-weight: normal;
   font-size: 2em;
-  margin-bottom: 50px;
   color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+  z-index: 100;
 }
-body header h1 span {
+body .main header h1 span {
   font-size: 2.5rem;
   font-weight: bold;
   color: #184f7c;
 }
-body header button {
+body .main header button {
   position: relative;
-  padding: 12px 35px;
+  padding: 10px 30px;
   background: #ffffff;
   font-size: 1.5em;
   font-weight: normal;
@@ -91,9 +92,9 @@ body header button {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   font-family: sg, sans-serif;
-  z-index: 10;
+  z-index: 100;
 }
-body header button .star {
+body .main header button .star {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -103,137 +104,141 @@ body header button .star {
   transition: all 0.5s;
   opacity: 0;
 }
-body header button .star:nth-child(1) {
+body .main header button .star:nth-child(1) {
   top: 20%;
   left: 20%;
   width: 25px;
 }
-body header button .star:nth-child(2) {
+body .main header button .star:nth-child(2) {
   top: 45%;
   left: 45%;
   width: 15px;
 }
-body header button .star:nth-child(3) {
+body .main header button .star:nth-child(3) {
   top: 40%;
   left: 40%;
   width: 7px;
 }
-body header button .star:nth-child(4) {
+body .main header button .star:nth-child(4) {
   top: 20%;
   left: 40%;
   width: 10px;
 }
-body header button .star:nth-child(5) {
+body .main header button .star:nth-child(5) {
   top: 25%;
   left: 45%;
   width: 15px;
 }
-body header button .star:nth-child(6) {
+body .main header button .star:nth-child(6) {
   top: 5%;
   left: 50%;
   width: 7px;
 }
-body header button:hover {
+body .main header button:hover {
   background: transparent;
   color: #fec195;
   box-shadow: 0 0 25px rgba(254, 193, 149, 0.5490196078);
   background-color: #fffdef;
 }
-body header button:hover .star {
+body .main header button:hover .star {
   filter: drop-shadow(0 0 10px rgba(254, 193, 149, 0.5490196078));
   opacity: 1;
 }
-body header button:hover .star:nth-child(1) {
+body .main header button:hover .star:nth-child(1) {
   top: -80%;
   left: -30%;
 }
-body header button:hover .star:nth-child(2) {
+body .main header button:hover .star:nth-child(2) {
   top: -25%;
   left: 10%;
 }
-body header button:hover .star:nth-child(3) {
+body .main header button:hover .star:nth-child(3) {
   top: 55%;
   left: 10%;
 }
-body header button:hover .star:nth-child(4) {
+body .main header button:hover .star:nth-child(4) {
   top: 30%;
   left: 80%;
 }
-body header button:hover .star:nth-child(5) {
+body .main header button:hover .star:nth-child(5) {
   top: 25%;
   left: 115%;
 }
-body header button:hover .star:nth-child(6) {
+body .main header button:hover .star:nth-child(6) {
   top: 5%;
   left: 60%;
 }
-body main {
+body .main main {
   position: relative;
   max-width: 400px;
-  margin-top: 20px;
   max-height: 300px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-body main #cake {
+body .main main #cake {
   display: block;
   position: relative;
   justify-self: center;
   top: -500px;
   left: 12px;
-  margin: -10em auto 0 auto;
+  margin: -12em auto 0 auto;
   min-width: 400px;
 }
-body main .candle {
+body .main main .candle {
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
   top: -200px;
-  left: 50%;
-  margin-left: -2.4px;
   width: 6px;
   height: 100px;
   -webkit-transform: translateY(-300px);
   transform: translateY(-300px);
-  backface-visibility: hidden;
+  visibility: hidden;
 }
-body main .candle:after,
-body main .candle:before {
-  background: rgba(255, 0, 0, 0.4);
+body .main main .candle:after {
+  background: rgba(241, 158, 158, 0.869);
   content: "";
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 5px;
 }
-body main .candle:after {
+body .main main .candle:before {
+  background: rgba(201, 156, 255, 0.869);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+}
+body .main main .candle:after {
   top: 25%;
   left: 0;
 }
-body main .candle:before {
+body .main main .candle:before {
   top: 45%;
   left: 0;
 }
-body main .candle1 {
+body .main main .candle1 {
   left: 110px;
-  animation: in 500ms 7.5s ease-out forwards;
+  animation: in 500ms 8s ease-out forwards;
 }
-body main .candle2 {
+body .main main .candle2 {
   left: 160px;
-  animation: in 500ms 7.7s ease-out forwards;
+  animation: in 500ms 8.2s ease-out forwards;
 }
-body main .candle3 {
+body .main main .candle3 {
   left: 210px;
-  animation: in 500ms 7.9s ease-out forwards;
+  animation: in 500ms 8.4s ease-out forwards;
 }
-body main .candle4 {
+body .main main .candle4 {
   left: 260px;
-  animation: in 500ms 8.1s ease-out forwards;
+  animation: in 500ms 8.6s ease-out forwards;
 }
-body main .candle5 {
+body .main main .candle5 {
   left: 310px;
-  animation: in 500ms 8.3s ease-out forwards;
+  animation: in 500ms 8.8s ease-out forwards;
 }
-body main .fire {
+body .main main .fire {
   border-radius: 100%;
   position: absolute;
   top: -20px;
@@ -242,20 +247,20 @@ body main .fire {
   width: 6.66666667px;
   height: 18px;
 }
-body main .fire:nth-child(1) {
-  animation: fire 2s 9s infinite;
+body .main main .fire:nth-child(1) {
+  animation: fire 2s 9.5s infinite;
 }
-body main .fire:nth-child(2) {
-  animation: fire 1.5s 9s infinite;
+body .main main .fire:nth-child(2) {
+  animation: fire 1.5s 9.5s infinite;
 }
-body main .fire:nth-child(3) {
-  animation: fire 1s 9s infinite;
+body .main main .fire:nth-child(3) {
+  animation: fire 1s 9.5s infinite;
 }
-body main .fire:nth-child(4) {
-  animation: fire 0.5s 9s infinite;
+body .main main .fire:nth-child(4) {
+  animation: fire 0.5s 9.5s infinite;
 }
-body main .fire:nth-child(5) {
-  animation: fire 0.2s 9s infinite;
+body .main main .fire:nth-child(5) {
+  animation: fire 0.2s 9.5s infinite;
 }
 @keyframes fire {
   0%, 100% {
@@ -271,11 +276,24 @@ body main .fire:nth-child(5) {
 }
 @keyframes in {
   to {
-    -webkit-transform: translateY(260px);
-    transform: translateY(260px);
+    -webkit-transform: translateY(230px);
+    transform: translateY(230px);
+    visibility: visible;
   }
 }
-body .toggleSwitch {
+body .main h1 {
+  text-align: center;
+  font-family: rubik, sans-serif;
+  font-weight: normal;
+  font-size: 2em;
+  color: #ffffff;
+  margin: 0;
+  margin-top: 10px;
+}
+body .main .wish {
+  margin-top: 30px;
+}
+body .main .toggleSwitch {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -292,16 +310,16 @@ body .toggleSwitch {
   overflow: hidden;
   z-index: 10;
 }
-body #checkboxInput {
+body .main #checkboxInput {
   display: none;
 }
-body .bell {
+body .main .bell {
   width: 18px;
 }
-body .bell path {
+body .main .bell path {
   fill: white;
 }
-body .speaker {
+body .main .speaker {
   width: 100%;
   height: 100%;
   display: flex;
@@ -310,10 +328,10 @@ body .speaker {
   z-index: 2;
   transition-duration: 0.3s;
 }
-body .speaker svg {
+body .main .speaker svg {
   width: 18px;
 }
-body .mute-speaker {
+body .main .mute-speaker {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -324,25 +342,83 @@ body .mute-speaker {
   z-index: 3;
   transition-duration: 0.3s;
 }
-body .mute-speaker svg {
+body .main .mute-speaker svg {
   width: 18px;
 }
-body #checkboxInput:checked + .toggleSwitch .speaker {
+body .main #checkboxInput:checked + .toggleSwitch .speaker {
   opacity: 0;
   transition-duration: 0.3s;
 }
-body #checkboxInput:checked + .toggleSwitch .mute-speaker {
+body .main #checkboxInput:checked + .toggleSwitch .mute-speaker {
   opacity: 1;
   transition-duration: 0.3s;
 }
-body #checkboxInput:active + .toggleSwitch {
+body .main #checkboxInput:active + .toggleSwitch {
   transform: scale(0.7);
 }
-body #checkboxInput:hover + .toggleSwitch {
+body .main #checkboxInput:hover + .toggleSwitch {
   background-color: #184f7c;
 }
 body .hide {
   display: none;
+}
+
+@media (min-width: 700px) {
+  html body {
+    justify-content: center;
+  }
+}
+@media (max-width: 391px) {
+  html .main .wish {
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  html .main main #cake {
+    left: 0;
+  }
+  html .main main .candle1 {
+    left: 80px;
+    animation: in 500ms 8s ease-out forwards;
+  }
+  html .main main .candle2 {
+    left: 130px;
+    animation: in 500ms 8.2s ease-out forwards;
+  }
+  html .main main .candle3 {
+    left: 180px;
+    animation: in 500ms 8.4s ease-out forwards;
+  }
+  html .main main .candle4 {
+    left: 230px;
+    animation: in 500ms 8.6s ease-out forwards;
+  }
+  html .main main .candle5 {
+    left: 280px;
+    animation: in 500ms 8.8s ease-out forwards;
+  }
+}
+@media (max-width: 350px) {
+  html .main main .candle1 {
+    left: 70px;
+    animation: in 500ms 8s ease-out forwards;
+  }
+  html .main main .candle2 {
+    left: 120px;
+    animation: in 500ms 8.2s ease-out forwards;
+  }
+  html .main main .candle3 {
+    left: 170px;
+    animation: in 500ms 8.4s ease-out forwards;
+  }
+  html .main main .candle4 {
+    left: 220px;
+    animation: in 500ms 8.6s ease-out forwards;
+  }
+  html .main main .candle5 {
+    left: 270px;
+    animation: in 500ms 8.8s ease-out forwards;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
